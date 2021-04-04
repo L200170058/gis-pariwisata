@@ -1,0 +1,74 @@
+.containergallery {
+    width: 800px;
+    background-color: white;
+    margin:auto;
+    padding: 40px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .5);
+    border-radius: 5px;
+}
+
+.gallery li{
+    width: 120px;
+    height: 120px;
+    border-radius: 50px;
+    overflow: hidden;
+    border: 5px solid #666;
+    float: left;
+    margin-right: 10px;
+}
+
+.clear{
+    clear: both;
+}
+
+.overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 9999;
+    transition: 3s;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.overlay:target{
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .7);
+
+}
+
+
+.overlay img{
+    max-height: 100%;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, .5);
+}
+
+.overlay :target img{
+    animation: zoomDanFade 3s;
+}
+
+.overlay button{
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: 20px;
+    color: ;
+}
+
+@keyframes zoomDanFade{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
